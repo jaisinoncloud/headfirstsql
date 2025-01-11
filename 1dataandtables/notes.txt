@@ -1,0 +1,55 @@
+Database: Container for tables and other SQL structures related to those tables. Normally databases have inter-related tables.
+
+Table: Structure inside your database to organize data.
+column: attribute (field)
+row: object (record)
+
+creating database;
+CREATE DATABASE <database_name>;
+
+using the databaase:
+USE <database_name>;
+
+creating table:
+
+CREATE TABLE <table_name> 
+(
+  <column1> <datatype>,
+  <column2> <datatype>,
+  .
+  .
+  <columnz> <datatype>
+)
+
+ex:
+CREATE TABLE jai_list
+(
+first_name VARCHAR(20) NOT NULL,
+last_name VARCHAR(30) NOT NULL,
+email VARCHAR(20),
+birthday DATE,
+profession VARCHAR(50),
+location VARCHAR(50),
+status VARCHAR(20) DEFAULT 'Single',
+interests VARCHAR(100),
+seeking VARCHAR(100)
+);
+NOT NULL: if you don't want NULL values in a column
+DEFAULT: if you want a particular value in case no value is provided
+Commonly used datatypes:
+CHAR,VARCHAR
+INT,DEC
+DATE,TIME,DATETIME,TIMESTAMP
+BLOB
+
+Describing a table:
+DESC <table_name>; (This varies for different databases \d for postgresql)
+
+Deleting a table:
+DROP TABLE <table_name>; (Deletes the table and the data it consists)
+
+Inserting data into table:
+INSERT INTO <table_name>
+(column1,column2...)
+VALUES
+(value1,value2,...)
