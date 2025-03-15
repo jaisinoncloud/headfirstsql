@@ -1,0 +1,8 @@
+DELETE:
+DELETE FROM <table_name> WHERE <column_name1> = <value1> .....;
+Note: If you omit where clause every row in the table is deleted
+
+UPDATE:
+UPDATE <table_name>
+SET <column_name1> = <value1>....
+[WHERE condition...]
