@@ -1,0 +1,19 @@
+Normalization
+
+Relational - Columns relate to eachother to describe a thing
+table design
+a) Pick your thing, the one thing that your table to describe
+b) Make a list of information you need to know about your one thing when you're using the table
+c) Using the list, break down the information about your thing into pieces you can use for organizing your table.
+
+Atomic: The smallest possible breakdown of information according to the need (that creates situation for the simplest possible query)
+Helps to store accurate data
+Rule1: A column with atomic data can't have several values of same type of data in that column
+Rule2: A table with atomic data cannot have multiple colums of the same data type
+
+1NF:
+Rule1 - Each row of data must contain atomic values.
+Rule2 - Each row of data must have an unique identifier known as PRIMARY KEY
+
+To see the command used to create a table:
+SHOW CREATE TABLE <table_name>;
