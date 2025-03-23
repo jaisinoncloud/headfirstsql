@@ -1,0 +1,20 @@
+Alter:
+
+ALTER TABLE <table_name> ADD COLUMN(typeof attribute) <cloumn_name> (options), ....
+
+ex:
+ALTER TABLE customer 
+ADD COLUMN contact_id INT NOT NULL AUTO_INCREMENT FIRST,
+ADD COLUMN phonenumber VARCHAR(10) AFTER first_name,
+ADD PRIMARY KEY (contact_id)
+
+AFTER,BEFORE,FIRST,LAST,SECOND..
+
+CHANGE : Both the name and data type of an existing column
+MODIFY : the data type or position* of an existing column
+ADD    : a column to your table
+DROP   : a column from your table
+
+RENAME: To rename a table ---- ALTER TABLE <old_table_name> RENAME TO <new_table_name>
+
+RIGHT()
