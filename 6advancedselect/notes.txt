@@ -1,0 +1,47 @@
+CASE:
+syntax -
+CASE
+WHEN column1 = value1 THEN new_value1
+WHEN column2 = value2 THEN new_value2
+WHEN column3 = value3 THEN new_value3
+...
+ELSE valuen
+END
+
+ORDER BY: ASC(default), DESC
+When multiple columns are used then they are ordered one after the other the way they are written after ORDER BY
+ex:
+SELECT title,category FROM movies
+WHERE title='Family'
+ORDER BY title
+
+SELECT title,category,purchased FROM movies
+WHERE title='Family'
+ORDER BY category,purchased DESC
+
+GROUP BY: To use with functions like AVG,SUM,MIN,MAX..
+ex:
+SELECT first_name, SUM(sales) from cookies
+GROUP BY first_name
+
+COUNT: Gives the number rows based on the column asked for (does not count NULL values) or total rows if used with all columns
+ex:
+SELECT COUNT(sales_date) FROM cookies
+SELECT COUNT(*) FROM cookies
+
+DISTINCT: Gives the distinct values of a column
+ex:
+SELECT DISTINCT sales_date from cookies
+ORDER BY sales_date
+SELECT COUNT(DISTINCT sales_date) from cookies
+
+LIMIT: To return a certain number of rows
+LIMIT x,y x=from where to start, y=how many from the start point
+ex:
+SELECT first_name, SUM(sales) from cookies
+GROUP BY first_name
+LIMIT 2
+
+SELECT first_name, SUM(sales) from cookies
+GROUP BY first_name
+LIMIT 1,1 
